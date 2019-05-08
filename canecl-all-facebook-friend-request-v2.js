@@ -6,6 +6,10 @@ Look at the log messages.
 
 */
 
+var config = {
+    per_request_time = 500; // ms
+}
+
 var total_fnd_requests = 0;
 
 function get_all_cancel_buttons(){
@@ -30,7 +34,7 @@ function cancel_request(btn, inc){
     setTimeout(function(){
         btn.click();
         cancel_ok_buttons();
-    }, 50 * inc);
+    }, config.per_request_time * inc);
 }
 
 function cancel_requests(){
@@ -51,7 +55,7 @@ function cancel_requests(){
     window.scrollBy(0, 500);
     setTimeout(function(){
         cancel_requests();
-    }, btns.length * 100);    
+    }, btns.length * config.per_request_time);
 }
 
 cancel_requests();
