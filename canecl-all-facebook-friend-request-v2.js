@@ -51,7 +51,7 @@ function cancel_requests(){
     window.scrollBy(0, 500);
     setTimeout(function(){
         cancel_requests();
-    }, 5000);    
+    }, btns.length * 100);    
 }
 
 cancel_requests();
