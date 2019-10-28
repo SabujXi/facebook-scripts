@@ -7,7 +7,7 @@ Look at the log messages.
 */
 
 var config = {
-    per_request_time = 500; // ms
+    per_request_time: 500 // ms
 }
 
 var total_fnd_requests = 0;
